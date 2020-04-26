@@ -1,0 +1,68 @@
+body {
+    position:absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    --swatch: url('./classic-cream.png');   
+}
+
+img#template {
+    max-width: 800px;
+    width: 100%;
+}
+
+div#canvas {
+    display: inline-block;
+    position: relative;
+}
+
+div.overlay {
+    position: absolute;
+    z-index: -1;
+}
+
+div#left-face {
+    top: 40%;
+    bottom: 22%;
+    left: 8%;
+    right: 35%;
+    transform: perspective(13cm) rotateX(7deg) rotateY(-45deg);
+    filter: contrast(110%) brightness(80%);
+}
+
+div#right-face {
+    top: 8%;
+    bottom: 17%;
+    left: 57%;
+    right: 7%;
+    transform: perspective(3263cm) rotateY(-5deg) rotateX(21deg);
+}
+
+div.siding {
+    background: var(--swatch);
+    background-size: 10%;
+}
+
+div#palette {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+div#palette div {
+    margin: 12px;
+}
+
+div#palette img {
+    height: 64px;
+    width: 64px;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+div#palette span {
+    text-align: center;
+}
